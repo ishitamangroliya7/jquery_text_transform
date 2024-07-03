@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text Transform</title>
+        <script src="https://kit.fontawesome.com/f5a4e026df.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.5/dist/tesseract.min.js"></script>
+        <link rel="stylesheet" href="text-transform.css">
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid align-items-center">
+                <a class="navbar-brand" href="#">Text Transform</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse text-end navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="text-transform.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About TextTransform</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-end">
+                        <div class="form-check m-0 form-switch toggle-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="darkModeToggle">
+                        </div>
+                        <p class="m-0 nav-link">Enable DarkMode</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <section>
+                <div class="container">
+                    <div class="d-md-flex gap-4 position-relative">
+                        <div id="swapButton"><i class="fa-solid fa-arrows-left-right"></i></div>
+                        <div class="form-floating w-100 pb-md-0 pb-4">
+                            <h3>Enter text here</h3>
+                            <div class="position-relative">
+                                <textarea class="form-control text-box" id="floatingTextarea2"
+                                    style="height: 100px "></textarea>
+                                <div id="display-img" style="display: none;"></div>
+                                <input type="file" id="imageUploadInput" accept="image/*" style="display:none;">
+                                <div id="uploadImageButton"><i class="fa-solid fa-image"></i></div>
+                            </div>
+                        </div>
+
+                        <div class="form-floating w-100 ps-md-3">
+                            <h3>Transform text</h3>
+                            <textarea class="form-control answer-box" id="floatingTextarea3" style="height: 100px "
+                                readonly></textarea>
+                        </div>
+                    </div>
+                    <div class="d-lg-flex pt-4">
+                        <div class="pt-4">
+                            <div class="btn-group" role="group" aria-label="Default button group">
+                                <button id="clearTextButton" class="btn">Clear Text</button>
+                                <button id="undoButton" class="btn">Undo</button>
+                                <button id="redoButton" class="btn">Redo</button>
+                            </div>
+                            <div class="d-flex flex-wrap gap-3 pt-4">
+                                <button type="button" id="Uppercase" class="btn">to Uppercase</button>
+                                <button type="button" id="Lowercase" class="btn">to Lowercase</button>
+                                <button type="button" id="Sentence" class="btn">to Sentence</button>
+                                <button type="button" id="removeWhitespaceButton" class="btn">Remove Whitespace</button>
+                                <button type="button" id="ToBase64Button" class="btn">to Base64</button>
+                                <button type="button" id="removeSpecialChar" class="btn">Remove Special
+                                    Characters</button>
+                                <button type="button" id="copyToClipboardButton" class="btn">Copy to Clipboard</button>
+                                <button type="button" id="pasteFromClipboardButton" class="btn">Paste from
+                                    Clipboard</button>
+                                <button type="button" id="reverseTextButton" class="btn">Reverse text</button>
+                                <button type="button" id="listenNowButton" class="btn">Listen Now</button>
+                                <button type="button" id="Alternate" class="btn">to Alternate</button>
+                                <button type="button" id="CountWord" class="btn">Count Words</button>
+                                <button type="button" id="CountChar" class="btn">Count Characters</button>
+                                <button type="button" id="CountLine" class="btn">Count Lines</button>
+                                <button type="button" id="CountSpace" class="btn">Count Spaces</button>
+                                <button type="button" id="Removenewline" class="btn">Remove Newline</button>
+                                <button type="button" id="ReplaceWord" class="btn">Replace Word</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="text-transform.js"></script>
+    </body>
+
+</html>

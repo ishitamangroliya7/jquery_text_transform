@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to bottom right, #e9ecef, #ffffff);
+}
+
+h3 {
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar,
+.form-control {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.form-check-input:checked {
+    background-color: #a0a7ae;
+    border-color: #8b96a0;
+}
+
+.form-check-input:focus {
+    border-color: #8b96a0;
+    box-shadow: 0 0 0 .25rem rgb(163 171 183 / 26%);
+}
+
+.dark-mode {
+    background: linear-gradient(to bottom right, #1e1e1e, #4d4c4c);
+    color: #cececf;
+    transition: color .3s ease-in;
+}
+
+.dark-mode .navbar-toggler {
+    border: 1px solid rgb(227 225 225 / 76%);
+}
+
+.dark-mode .navbar {
+    background-color: #1f1f1f;
+    border-bottom: 1px solid #a0a7ae;
+    transition: all .5s ease-in;
+}
+
+.dark-mode .navbar-brand,
+.dark-mode .nav-link {
+    color: #cececf;
+    transition: color 0.6s;
+}
+
+.dark-mode .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.dark-mode .form-check-input:focus,
+.text-box:focus {
+    border-color: #8b96a0;
+    box-shadow: 0 0 0 .25rem rgb(163 171 183 / 26%);
+    background-color: #ececec;
+}
+
+.answer-box:focus {
+    background-color: #ececec;
+    border-color: #a0a7ae;
+    box-shadow: none;
+}
+
+.dark-mode .answer-box:focus {
+    background-color: transparent;
+}
+
+.dark-mode .text-box {
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: all .4s ease-in;
+}
+
+.dark-mode .form-control {
+    color: #d5d5d6;
+}
+
+.form-control {
+    font-size: 16px;
+}
+
+.dark-mode .btn {
+    color: #d5d5d6;
+}
+
+.btn {
+    border: 1px solid #8b96a0;
+}
+
+.dark-mode .btn:hover {
+    background-color: #424549;
+}
+
+.btn:hover {
+    border: 1px solid #8b96a0;
+    background-color: #a0a7ae;
+    color: white;
+}
+
+.form-floating > .form-control-plaintext:focus,
+.form-floating > .form-control-plaintext:not(:placeholder-shown),
+.form-floating > .form-control:focus,
+.form-floating > .form-control:not(:placeholder-shown) {
+    padding-top: .625rem;
+}
+
+.dark-mode .form-control:focus {
+    color: white;
+}
+
+.dark-mode .btn-secondary {
+    --bs-btn-bg: #5a6167;
+    transition: all .4s ease-in;
+}
+
+#uploadImageButton {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#swapButton {
+    position: absolute;
+    left: 49.7%;
+    top: 20%;
+    cursor: pointer;
+}
+
+.accordion-item {
+    margin-bottom: 20px;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-body {
+    background-color: rgba(0, 0, 0, 0.075);
+    padding: 15px;
+    border: 1px solid #c6c7c8;
+    border-top: none;
+    border-radius: 10px;
+}
+
+.accordion-body p {
+    margin-bottom: 10px;
+}
+
+.accordion-body a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    #swapButton {
+        top: 55%;
+        left: auto;
+        right: 2%;
+        z-index: 999;
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    h3 {
+        padding-bottom: 10px;
+        font-size: 22px;
+    }
+    .navbar-toggler-icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: baseline;
+    }
+    .navbar-toggler {
+        padding: 5px;
+        line-height: 0;
+    }
+}
+
+@media (max-width: 568px) {
+    .btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        max-width: 95%;
+    }
+}
